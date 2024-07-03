@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            width:50vw;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows:repeat(2,200px) ;
+            background-color: aqua;
+            justify-content: center;
+            align-content: center;
+            border: 2px solid;
+            cursor: pointer;
+        }
+        .container .swamy{
+            background-color: green;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+        #main{
+            grid-column: 2/4;
+            height: 200px;
+        }
+        #cat:hover ~ #main{
+            background: url("https://t4.ftcdn.net/jpg/06/81/34/29/360_F_681342927_XnHKRjZBQpDB5lL3dUs1Wd6ZgKnIlJVC.jpg") no-repeat;
+            background-position: center;
+            background-size: cover;
+            justify-content: center;
+
+        }
+        #dog:hover ~ #main{
+            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW2_UQq9Jlkzek9kQzZ_JlXhkeBjidvBkB5A&s") no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        #snake:hover ~ #main{
+            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcYOl0XVYK_JAIHA34dxQwxks5xjk4noQdtw&s") no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        #lion:hover ~ #main{
+            background: url("https://img.freepik.com/free-photo/view-wild-lion-nature_23-2150460851.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1712707200&semt=ais") no-repeat;
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;  
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="swamy" id="cat">CAT</div>
+        <div class="swamy" id="dog">DOG</div>
+        <div class="swamy" id="snake">SNAKE</div>
+        <div class="swamy" id="lion">LION</div>
+        <div class="swamy" id="main"></div>
+    </div>
+</body>
+</html>
